@@ -1,3 +1,12 @@
+use structopt::StructOpt;
+
+use config::CliOptions;
+
+use crate::config::get_config;
+
+mod config;
+
 fn main() {
-    println!("Hello, world!");
+    let options = get_config();
+    println!("{:?}", options);
 }
